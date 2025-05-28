@@ -7,7 +7,7 @@ sudo apt install -y systemd-timesyncd
 
 # Edit the timesyncd.conf file to add the NTP server
 NTP_CONF="/etc/systemd/timesyncd.conf"
-NTP_SERVER="ntppool.hud.ac.uk"
+NTP_SERVER="" # Add NTP server here before running
 
 echo "Configuring NTP server..."
 sudo sed -i "s|#NTP=|NTP=$NTP_SERVER|g" $NTP_CONF
